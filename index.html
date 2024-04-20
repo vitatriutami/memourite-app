@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memourite App</title>
+  <link rel="stylesheet" href="./dist/output.css">
+  <script class="stylesheet" src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <main class="flex h-screen">
+    <nav class="flex flex-col items-center bg-purple-300 p-5 w-[300px]">
+      <div class="box-content h-20 border-b-2">
+        <img class="self-center" src="/logo-main.png" width="200px" height="70px" alt="">
+      </div>
+      <ul class="mt-10 text-black-300 text-sm flex flex-col items-start gap-4">
+        <li class="w-[200px] p-2 cursor-pointer bg-yellow-200 hover:bg-blue-200 rounded-md">
+          <a href="">
+            Dashboard
+          </a>
+        </li>
+        <li
+          class="w-[200px] p-2 cursor-pointer bg-yellow-200 hover:bg-yellow-600 active:bg-yellow-500 focus:outline-none focus:ring focus:ring-yellow-300 rounded-md">
+          This Week</li>
+        <li
+          class="w-[200px] p-2 cursor-pointer bg-yellow-200 hover:bg-yellow-600 active:bg-yellow-500 focus:outline-none focus:ring focus:ring-yellow-300 rounded-md">
+          Category</li>
+      </ul>
+    </nav>
+    <div class="p-5 px-9 space-y-10 bg-slate-100">
+      <nav class="flex justify-between items-center h-20 border-b-2">
+        <input id="searchInput" placeholder="Search Notes" class="border border-black-300 p-3 rounded-lg w-[250px]" />
+        <div class="flex gap-2">
+          <h1>Username</h1>
+          <h1>Dot</h1>
+        </div>
+      </nav>
+      <!-- <section class="mt-6">
+        <h1 class="text-xl text-orange-500 font-medium mb-5">Memorable Note. Keep your memory by writing it here</h1>
+        <form id="form" class="space-y-2 mb-6" action="">
+          <input name="title" placeholder="Title" class="border p-2 rounded-lg block w-full" type="text" />
+          <textarea name="content" placeholder="Your note" class="border p-2 rounded-lg block w-full"></textarea>
+          <button class="bg-indigo-500 texxt-white font-medium p-2 rounded-lg">Make a note</button>
+        </form>
+      </section> -->
+      <section class="flex flex-col">
+        <div class="flex justify-between items-center">
+          <div class="flex gap-2">
+            <h1 class="border border-transparent hover:border-blue-300 hover:bg-blue-300 px-3 rounded-md">All</h1>
+            <h1 class="border border-transparent hover:border-blue-300 hover:bg-blue-300 px-3 rounded-md">Project</h1>
+            <h1 class="border border-transparent hover:border-blue-300 hover:bg-blue-300 px-3 rounded-md">Business</h1>
+            <h1 class="border border-transparent hover:border-blue-300 hover:bg-blue-300 px-3 rounded-md">Personal</h1>
+          </div>
+          <div class="flex gap-2">
+            <h1>++</h1>
+            <button class="text-blue-700">Add new note</button>
+          </div>
+        </div>
+        <div id="noteCard" class="grid grid-cols-3 gap-10 p-2 mt-5"></div>
+      </section>
+    </div>
+  </main>
+  <script src="./main.js"></script>
+</body>
+
+</html>

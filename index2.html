@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note Taking App</title>
+  <script class="stylesheet" src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <main class="max-w-2xl m-auto my-12 space-y-6">
+    <nav class="flex justify-between items-center">
+      <!-- <h1 class="text-xl text-center text-red-500 font-bold">Memourite</h1> -->
+      <img src="./logo.png" width="70px" height="30px" alt="">
+      <input id="searchInput" placeholder="Search Notes" class="border border-slate-500 p-2 rounded-lg w-[250px]" />
+      <div class="flex items-center gap-2">
+        <h1>Username</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 14 14">
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            d="M13.5 2H.5m13 5H.5m13 5H.5" />
+        </svg>
+      </div>
+    </nav>
+    <section>
+      <h1 class="text-xl text-orange-500 font-medium mb-5">Memorable Note. Keep your memory by writing it here</h1>
+      <form id="form" class="space-y-2 mb-6" action="">
+        <input name="title" placeholder="Title" class="border p-2 rounded-lg block w-full" type="text" />
+        <textarea name="content" placeholder="Your note" class="border p-2 rounded-lg block w-full"></textarea>
+        <button class="bg-indigo-500 texxt-white font-medium p-2 rounded-lg">Make a note</button>
+      </form>
+    </section>
+    <section>
+      <h1 class="text-xl text-center text-slate-500 font-bold">My notes</h1>
+      <div id="noteCard" class="grid grid-cols-3 gap-10 border border-red-500 border-2 p-10 mt-5"></div>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
